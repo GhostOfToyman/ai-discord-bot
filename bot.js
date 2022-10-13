@@ -23,6 +23,8 @@ client.once('ready', () => {
     console.log('Bot is online');
 });
 
+
+
 client.on('interactionCreate', async interaction => {
     if (!interaction.isChatInputCommand()) return;
 
@@ -31,12 +33,25 @@ client.on('interactionCreate', async interaction => {
     if (!command) return;
 
     try {
-        await interaction.reply('Working on it...');
-        const input = interaction.options.getString('input');
-        console.log(input)
-        const result = await ask(input);
-        await interaction.editReply(result);
-
+        
+        // Get interaction author information
+        const interactionUser = await interaction.guild.members.fetch(interaction.user.id)
+        
+        const userId = interactionUser.id
+        
+        if(userId === "584396828322037760") {
+            //User exclusion
+            interaction.reply("SHUT UP");
+        } else {
+            // Ai replies
+            await interaction.reply('Working on it...');
+            const input = interaction.options.getString('input');
+            console.log(input)
+            const result = await ask(input);
+            await interaction.editReply(result);
+        };
+        
+        
     } catch (err) {
         console.log(err);
         await interaction.reply({ content: "There was an error while executing the command", ephemeral: true});
