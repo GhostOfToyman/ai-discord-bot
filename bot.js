@@ -31,10 +31,11 @@ client.on('interactionCreate', async interaction => {
     if (!command) return;
 
     try {
+        await interaction.reply('Working on it...');
         const input = interaction.options.getString('input');
         console.log(input)
-        const answer = await ask(input);
-        interaction.reply(answer);
+        const result = await ask(input);
+        await interaction.editReply(result);
 
     } catch (err) {
         console.log(err);
