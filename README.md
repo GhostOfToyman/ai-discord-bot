@@ -15,17 +15,13 @@
 
 
 
-<!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/GhostOfToyman/ai-discord-bot">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-<h3 align="center">project_title</h3>
+
+<h3 align="center">AI Discord Bot</h3>
 
   <p align="center">
-    project_description
+    AI Discord Bot with OpenAI GPT-3 API Integration
     <br />
     <a href="https://github.com/GhostOfToyman/ai-discord-bot"><strong>Explore the docs »</strong></a>
     <br />
