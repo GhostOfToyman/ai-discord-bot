@@ -4,7 +4,7 @@
   "description": "Discord bot with OpenAI integration",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "main": "node ."
   },
   "repository": {
     "type": "git",
