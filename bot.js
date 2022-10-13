@@ -39,7 +39,7 @@ client.on('interactionCreate', async interaction => {
         
         const userId = interactionUser.id
         
-        if(userId === "584396828322037760") {
+        if(userId === "INSTERT DISCORD USER ID") {
             //User exclusion
             interaction.reply("SHUT UP");
         } else {
