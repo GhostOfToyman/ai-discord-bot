@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Gitpod configs 
+.gitpod.yml
+
+# ESlint
+.eslintrc.json
+
+# config
+config.json
+
