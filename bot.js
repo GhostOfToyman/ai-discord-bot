@@ -1,8 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
-const { token, guildId } = require('./config.json')
-const { ask } = require('./src/ai.js')
+const { token, guildId } = require('./config.json');
+const { ask } = require('./src/ai.js');
 
 
 
@@ -35,9 +35,9 @@ client.on('interactionCreate', async interaction => {
     try {
         
         // Get interaction author information
-        const interactionUser = await interaction.guild.members.fetch(interaction.user.id)
+        const interactionUser = await interaction.guild.members.fetch(interaction.user.id);
         
-        const userId = interactionUser.id
+        const userId = interactionUser.id;
         
         if(userId === "584396828322037760") {
             //User exclusion
@@ -48,7 +48,13 @@ client.on('interactionCreate', async interaction => {
             const input = interaction.options.getString('input');
             console.log(input)
             const result = await ask(input);
-            await interaction.editReply(result);
+            
+            try {
+                await interaction.editReply(result);
+            } catch(err) {
+                await interaction.editReply("Something went wrong, please try again");
+                console.log(err);
+            };
         };
         
         
