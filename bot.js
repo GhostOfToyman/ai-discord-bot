@@ -39,9 +39,9 @@ client.on('interactionCreate', async interaction => {
         
         const userId = interactionUser.id
         
-        if(userId === "INSTERT DISCORD USER ID") {
+        if(userId === "584396828322037760") {
             //User exclusion
-            interaction.reply("SHUT UP");
+            interaction.reply("HEFU IWEEE WAIIII");
         } else {
             // Ai replies
             await interaction.reply('Working on it...');
